@@ -1,20 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="../style.css">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trigonometry</title>
+    <title>Trigonometri</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
-<body>
-    <h1>Trigonometry</h1>
-    <p>Here is an example of an inline equation: \( a^2 + b^2 = c^2 \)</p>
-    <p>Here is an example of a block equation:</p>
-    <p>
-        \[
-        \int_{a}^{b} x^2 dx
-        \]
-    </p>
-</body>
+    <body class="latex-dark">
+        <div style="align-items: start;">
+            <button type="button" onclick="window.location.href = '../index.html'"> <b>←</b> </button>
+        </div>
+        
+        <header>
+            <h1><span>Trigonometri</h1>
+        </header>
+        <div style="text-align: center;">
+            <p><a href="../assets/pembinaan/2023/trig.pdf">PDF</a></p>
+        </div>
+        <hr>
+
+        <div>
+            <p><b>Trigonometri</b> adalah cabang ilmu geometri yang membahas tentang segitiga. Trigonometri memberikan hubungan analitis antara sisi dan sudut suatu segitiga, serta menghubungkan geometri dengan aljabar. Kenapa harus repot-repot belajar trigonometri?</p>
+            <p>Kita mulai dengan meninjau beberapa persoalan. Misalkan kita punya suatu segitiga yang panjang seluruh sisinya sudah diketahui. Kira-kira apakah informasi tersebut cukup untuk menentukan bagian-bagian segitiga lainnya, yakni sudutnya? Misalnya:</p>
+            <blockquote> "Panjang sisi-sisi suatu segitiga adalah 3, 4, dan 5 sentimeter. Berapa besar sudut-sudutnya?" </blockquote>
+            <p>Dengan pengetahuan matematika yang kita punya di SMP, apakah ada rumus atau fakta geometris yang bisa kita pakai di sini? Sayangnya tidak. Hal terbaik yang bisa kita lakukan hanyalah mencoba menggambar segitiga tersebut lalu mengukur besar sudutnya dengan busur. Dari sini bisa kita sadari bahwa masih ada ``lubang'' dalam ilmu geometri yang belum kita isi. Bahkan pertanyaan sesepele ini belum bisa kita jawab dengan kepastian. Oleh karena itu, trigonometri hadir untuk memberikan solusi.</p>
+        </div>
+
+        <h1> 6 Fungsi Trigonometri </h1>
+        <figure align="center">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            <svg
+                width="52.275532mm"
+                height="47.409393mm"
+                viewBox="0 0 52.275532 47.409393"
+                version="1.1"
+                id="svg1"
+                xml:space="preserve"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+                    id="namedview1"
+                    pagecolor="#ffffff"
+                    bordercolor="#000000"
+                    borderopacity="0.25"
+                    inkscape:showpageshadow="2"
+                    inkscape:pageopacity="0.0"
+                    inkscape:pagecheckerboard="0"
+                    inkscape:deskcolor="#d1d1d1"
+                    inkscape:document-units="mm"><inkscape:page
+                    x="-7.0492581e-07"
+                    y="1.5300557e-07"
+                    width="52.275532"
+                    height="47.409393"
+                    id="page2"
+                    margin="0"
+                    bleed="0"
+                    inkscape:export-filename="Page 2.svg"
+                    inkscape:export-xdpi="96"
+                    inkscape:export-ydpi="96" /></sodipodi:namedview><defs
+                    id="defs1" /><g
+                    id="g1"
+                    inkscape:groupmode="layer"
+                    inkscape:label="2"
+                    transform="matrix(0.26458333,0,0,0.26458335,195.39376,-13.493751)"><path
+                    id="path2"
+                    d="M -561.67778,52.137529 -737.22177,214.13214 h 175.54399 z"
+                    style="fill:none;stroke:#dbdbdb;stroke-width:0.99628;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" /><path
+                    id="path3"
+                    d="m -715.34354,193.76823 c 4.97144,5.34005 8.01006,12.49331 8.01006,20.36391 h -29.88829 z"
+                    style="fill:none;stroke:#000000;stroke-width:0.99628;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0" /><path
+                    id="path4"
+                    d="m -715.34354,193.76823 c 4.97144,5.34005 8.01006,12.49331 8.01006,20.36391"
+                    style="fill:none;stroke:#dbdbdb;stroke-width:0.99628;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" /><path
+                    id="path5"
+                    d="m -569.64799,196.63748 v 9.52444 h -9.52441"
+                    style="fill:none;stroke:#dbdbdb;stroke-width:0.99628;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" /><path
+                    id="path6"
+                    d="m -561.82724,82.025835 c -8.17944,-0.03985 -16.28912,-3.4272 -22.13725,-9.98272 l 22.28671,-19.905586 z"
+                    style="fill:none;stroke:#000000;stroke-width:0.99628;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0" /><path
+                    id="path7"
+                    d="m -561.82724,82.025835 c -8.17944,-0.03985 -16.28912,-3.4272 -22.13725,-9.98272"
+                    style="fill:none;stroke:#dbdbdb;stroke-width:0.99628;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" /><path
+                    id="path8"
+                    d="m -695.49353,196.35015 c 0.17188,-0.79688 0.29688,-1.65625 0.29688,-2.42188 0,-1.53125 -0.5,-2.78125 -2.21875,-2.78125 -3.28125,0 -4.5,4.90625 -4.5,7.65625 0,1.57813 0.54687,2.71875 2.25,2.71875 2.51562,0 3.57812,-2.53125 4.17187,-5.17187 z m -1.25,-0.42188 h -3.4375 c 0.25,-1.17187 1,-4.32812 2.65625,-4.32812 0.85938,0 1.10938,0.85937 1.10938,1.84375 0,0.89062 -0.20313,1.90625 -0.32813,2.48437 z m -0.10937,0.5 c -0.34375,1.625 -1.10938,4.6875 -2.73438,4.6875 -0.84375,0 -1.09375,-0.8125 -1.09375,-1.82812 0,-0.95313 0.21875,-2.07813 0.39063,-2.85938 z m 0,0"
+                    style="fill:#dbdbdb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+                    aria-label="θ" /><path
+                    id="path9"
+                    d="m -662.07556,117.09624 c -0.70312,0.92188 -1.46875,1.40625 -2.14062,1.40625 -0.84375,0 -1.32813,-0.625 -1.32813,-1.6875 0,-1.01562 0.32813,-2.14062 0.89063,-2.92187 0.48437,-0.71875 1,-1.0625 1.625,-1.0625 0.45312,0 0.90625,0.23437 0.90625,0.46875 0,0.0937 -0.0625,0.15625 -0.21875,0.21875 -0.39063,0.17187 -0.53125,0.34375 -0.53125,0.6875 0,0.40625 0.3125,0.6875 0.75,0.6875 0.51562,0 0.90625,-0.45313 0.90625,-1.0625 0,-0.85938 -0.82813,-1.53125 -1.85938,-1.53125 -1.98437,0 -3.76562,2.04687 -3.76562,4.3125 0,1.5625 0.95312,2.57812 2.4375,2.57812 1.0625,0 1.98437,-0.60937 2.73437,-1.78125 z m 0,0"
+                    style="fill:#dbdbdb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+                    aria-label="c" /><path
+                    id="path10"
+                    d="m -542.71618,137.33061 -0.39063,1.28125 c -0.0937,-0.875 -0.79687,-1.48437 -1.71875,-1.48437 -0.875,0 -1.6875,0.45312 -2.34375,1.29687 -0.73437,0.9375 -1.15625,2.14063 -1.15625,3.26563 0,1.40625 0.84375,2.32812 2.09375,2.32812 0.89063,0 1.45313,-0.35937 2.17188,-1.39062 -0.0625,0.21875 -0.0781,0.3125 -0.0781,0.46875 0,0.54687 0.35938,0.92187 0.875,0.92187 0.625,0 1.15625,-0.34375 1.65625,-1.04687 0.28125,-0.39063 0.51563,-0.79688 0.6875,-1.17188 l -0.4375,-0.25 c -0.53125,1.07813 -1.03125,1.6875 -1.40625,1.6875 -0.15625,0 -0.29687,-0.15625 -0.29687,-0.35937 0,-0.14063 0.0625,-0.40625 0.15625,-0.76563 l 1.42187,-4.78125 z m -1.875,0.57813 c 0.67187,0 1.07812,0.48437 1.07812,1.26562 0,0.79688 -0.28125,1.9375 -0.71875,2.82813 -0.4375,0.89062 -0.95312,1.28125 -1.67187,1.28125 -0.70313,0 -1.125,-0.51563 -1.125,-1.39063 0,-1.25 0.54687,-2.71875 1.29687,-3.48437 0.3125,-0.32813 0.71875,-0.5 1.14063,-0.5 z"
+                    style="fill:#dbdbdb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+                    aria-label="a"
+                    sodipodi:nodetypes="ccscsscsscccsscccssssscs" /><path
+                    id="path11"
+                    d="m -637.38998,219.4976 -2.73438,0.21875 -0.0625,0.5 h 0.34375 c 0.59375,0 0.8125,0.14062 0.8125,0.46875 0,0.10937 -0.0469,0.29687 -0.125,0.60937 l -1.70312,5.73438 c -0.125,0.4375 -0.20313,0.82812 -0.20313,1.125 0,1.23437 0.90625,2.03125 2.3125,2.03125 1.10938,0 1.95313,-0.34375 2.73438,-1.09375 0.92187,-0.90625 1.4375,-2.09375 1.4375,-3.39063 0,-1.45312 -0.82813,-2.40625 -2.09375,-2.40625 -0.82813,0 -1.4375,0.34375 -2.23438,1.28125 z m 0.25,4.65625 c 0.71875,0 1.15625,0.5625 1.15625,1.48437 0,0.90625 -0.29688,1.89063 -0.76563,2.6875 -0.54687,0.90625 -1.14062,1.3125 -1.875,1.3125 -0.78125,0 -1.23437,-0.51562 -1.23437,-1.375 0,-0.875 0.34375,-1.98437 0.84375,-2.8125 0.54687,-0.85937 1.17187,-1.29687 1.875,-1.29687 z m 0,0"
+                    style="fill:#dbdbdb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+                    aria-label="b" /><path
+                    id="path12"
+                    d="m -577.9818,93.615768 0.60937,-2.765625 c 2.6875,-0.15625 4.57813,-2.453125 4.57813,-4.890625 0,-1.734375 -1.07813,-2.1875 -2.3125,-2.1875 -1.17188,0 -2.25,1.375 -2.59375,2.90625 -0.28125,1.25 -0.59375,2.59375 -0.79688,3.609375 -1.3125,-0.07813 -1.73437,-0.78125 -1.73437,-1.78125 0,-1.46875 0.42187,-2.96875 1.59375,-4.3125 l 0.0156,0.01563 c 0,-0.125 -0.0625,-0.3125 -0.125,-0.3125 l -0.0312,0.01563 c -1.92187,1.015625 -2.73437,2.375 -2.73437,4.09375 0,1.625 1.25,2.734375 2.89062,2.84375 l -0.67187,3.156249 z m 0.70312,-3.265625 0.84375,-3.921875 c 0.20313,-0.875 0.625,-2.171875 1.48438,-2.171875 0.64062,0 0.8125,0.734375 0.8125,1.515625 0,2.078125 -0.8125,4.515625 -3.14063,4.578125 z m 0,0"
+                    style="fill:#dbdbdb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.33333"
+                    aria-label="ϕ" />
+                </g>
+            </svg>
+            <figcaption>Segitiga siku-siku dengan sudut \(\theta\). </figcaption>
+        </figure>
+
+        Dengan segitiga siku-siku di atas, kita bisa definisikan 6 fungsi<label for="sn-1" class="sidenote-toggle sidenote-number"></label>
+        <input type="checkbox" id="sn-1" class="sidenote-toggle" />
+        <span class="sidenote">Catat bahwa makna kata ``fungsi'' di sini bukanlah ``kegunaan'. ``Fungsi'' di sini sama saja seperti ``fungsi'' \(f(x)\) di aljabar.</span> 
+        trigonometri pada sudut \(\theta\) (dibaca ``theta'') sebagai berikut<label for="sn-2" class="sidenote-toggle sidenote-number"></label>
+        <input type="checkbox" id="sn-2" class="sidenote-toggle" />
+        <span class="sidenote">Yang dimaksud dengan "depan" adalah sisi yang berada di depan sudut \(\theta\), sementara ``samping'' adalah sisi yang berada di samping sudut, dengan salah satu ujung sisi tersebut adalah titik sudut \(\theta\). Adapun "miring" maksudnya sisi miring atau hipotenusa dari segitiga siku-siku. </span> 
+        :
+            \[
+            \begin{aligned}
+                \sin (\theta) & = \dfrac{\text{depan}}{\text{miring}} = \dfrac{a}{c}      &&\csc (\theta) = \dfrac{\text{miring}}{\text{depan}} = \dfrac{c}{a}    \\[1em]
+                \cos (\theta) & = \dfrac{\text{samping}}{\text{miring}} = \dfrac{b}{c}    &&\sec (\theta) = \dfrac{\text{miring}}{\text{samping}} = \dfrac{c}{b}  \\[1em]
+                \tan (\theta) & = \dfrac{\text{depan}}{\text{samping}} = \dfrac{a}{b}     &&\cot (\theta) = \dfrac{\text{samping}}{depan} = \dfrac{b}{a} 
+            \end{aligned}
+            \]
+            Keenam fungsi di atas, yakni sinus, kosinus, tangen, kosekan, sekan, dan kotangen<label for="sn-2" class="sidenote-toggle sidenote-number"></label>
+            <input type="checkbox" id="sn-2" class="sidenote-toggle" />
+            <span class="sidenote">Dalam bahasa Inggris: <em>sine, cosine, tangent, cosecant, secant, and cotangent</em>. </span> 
+            adalah aktor utama dalam trigonometri.
+        <h1> Hubungan Antarfungsi Trigonometri </h1>
+        <p>Keenam fungsi trigonometri saling berhubungan! Kita akan membuktikan sejumlah identitas<label for="sn-3" class="sidenote-toggle sidenote-number"></label>
+            <input type="checkbox" id="sn-3" class="sidenote-toggle" />
+            <span class="sidenote">Identitas adalah suatu persamaan yang selalu benar untuk semua nilai variabel. Misalnya, persamaan \(x=x\) adalah suatu identitas karena tidak peduli berapa nilai variabel \(x\), persamaan tersebut bernilai benar. </span> 
+            
+            yang menggambarkan hubungan mereka karena ini akan sangat bermanfaat dalam penyelesaian masalah. Kita akan mengacu pada segitiga siku-siku di atas. 
+
+            <div class="proposisi">
+                Untuk setiap sudut \(\theta\), 
+                \[\tan \theta = \dfrac{\sin \theta}{\cos \theta}.\]
+            </div>
+            <div class="bukti">
+                \[ \dfrac{\sin \theta}{\cos \theta} = \dfrac{ \ \ \ \dfrac{a}{c} \ \ \ }{\dfrac{b}{c}} = \frac{a}{c} \div \frac{b}{c} = \frac{a}{c} \times \frac{c}{b} = \frac{a}{b} = \tan \theta. \]
+            </div>
+    </body>
 </html>
