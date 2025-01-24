@@ -481,6 +481,7 @@ dl dd {
   content: 'Bukti. ' attr(title);
   font-style: italic;
 }
+
 .bukti::after {
   content: '◾️';
   filter: var(--bukti-symbol-filter);
@@ -488,16 +489,33 @@ dl dd {
   right: -12px;
   bottom: -2px;
 }
+.bukti-toggle {
+  all: unset;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 8px;
+}
+.bukti-content {
+  margin-top: 8px;
+}
+.bukti-toggle[aria-expanded="true"]::before {
+  content: '▼';
+}
+
+.bukti-toggle[aria-expanded="false"]::before {
+  content: '▶';
+}
+
 
 /* Definition */
 .definition {
-  counter-increment: definition;
+  counter-increment: theorem;
   display: block;
   margin: 12px 0;
   font-style: normal;
 }
 .definition::before {
-  content: 'Definisi ' counter(definition) '. ';
+  content: 'Definisi ' counter(theorem) '. ';
   font-weight: bold;
   font-style: normal;
 }
