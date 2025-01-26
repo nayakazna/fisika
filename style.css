@@ -732,3 +732,13 @@ button:hover {
 .MathJax { 
   font-size: 1em !important; 
 }
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+figure svg {
+  height: auto;
+}
