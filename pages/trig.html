@@ -18,16 +18,21 @@
         <div style="text-align: center;">
             <p><a href="../assets/pembinaan/2023/trig.pdf">versi lawas dari artikel ini dalam bentuk PDF</a></p>
         </div>
+        
         <hr>
 
-        <div>
-            <p><b>Trigonometri</b> adalah cabang ilmu geometri yang membahas tentang segitiga. Trigonometri memberikan hubungan analitis antara sisi dan sudut suatu segitiga, serta menghubungkan geometri dengan aljabar. Kenapa harus repot-repot belajar trigonometri?</p>
-            <p>Kita mulai dengan meninjau beberapa persoalan. Misalkan kita punya suatu segitiga yang panjang seluruh sisinya sudah diketahui. Kira-kira apakah informasi tersebut cukup untuk menentukan bagian-bagian segitiga lainnya, yakni sudutnya? Misalnya:</p>
-            <blockquote> "Panjang sisi-sisi suatu segitiga adalah 3, 4, dan 5 sentimeter. Berapa besar sudut-sudutnya?" </blockquote>
-            <p>Dengan pengetahuan matematika yang kita punya di SMP, apakah ada rumus atau fakta geometris yang bisa kita pakai di sini? Sayangnya tidak. Hal terbaik yang bisa kita lakukan hanyalah mencoba menggambar segitiga tersebut lalu mengukur besar sudutnya dengan busur. Dari sini bisa kita sadari bahwa masih ada ``lubang'' dalam ilmu geometri yang belum kita isi. Bahkan pertanyaan sesepele ini belum bisa kita jawab dengan kepastian. Oleh karena itu, trigonometri hadir untuk memberikan solusi.</p>
-        </div>
+        <nav role="navigation" class="toc">
+          <h2>Daftar Isi</h2>
+          <ol id="toc-list"></ol>
+        </nav>
+        
+        <h1 id="intro">Pendahuluan</h1>
+        <p><b>Trigonometri</b> adalah cabang ilmu geometri yang membahas tentang segitiga. Trigonometri memberikan hubungan analitis antara sisi dan sudut suatu segitiga, serta menghubungkan geometri dengan aljabar. Kenapa harus repot-repot belajar trigonometri?</p>
+        <p>Kita mulai dengan meninjau beberapa persoalan. Misalkan kita punya suatu segitiga yang panjang seluruh sisinya sudah diketahui. Kira-kira apakah informasi tersebut cukup untuk menentukan bagian-bagian segitiga lainnya, yakni sudutnya? Misalnya:</p>
+        <blockquote> "Panjang sisi-sisi suatu segitiga adalah 3, 4, dan 5 sentimeter. Berapa besar sudut-sudutnya?" </blockquote>
+        <p>Dengan pengetahuan matematika yang kita punya di SMP, apakah ada rumus atau fakta geometris yang bisa kita pakai di sini? Sayangnya tidak. Hal terbaik yang bisa kita lakukan hanyalah mencoba menggambar segitiga tersebut lalu mengukur besar sudutnya dengan busur. Dari sini bisa kita sadari bahwa masih ada ``lubang'' dalam ilmu geometri yang belum kita isi. Bahkan pertanyaan sesepele ini belum bisa kita jawab dengan kepastian. Oleh karena itu, trigonometri hadir untuk memberikan solusi.</p>
 
-        <h1> 6 Fungsi Trigonometri </h1>
+        <h1 id="fungsi"> 6 Fungsi Trigonometri </h1>
         <div class="definition">
             <figure align="center">
                 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -132,7 +137,7 @@
             <span class="sidenote left">Dalam bahasa Inggris: <em>sine, cosine, tangent, cosecant, secant, and cotangent</em>. </span> 
             adalah aktor utama dalam trigonometri.
 
-        <h1> Hubungan Antarfungsi Trigonometri </h1>
+        <h1 id="hubungan"> Hubungan Antarfungsi Trigonometri </h1>
         <p>Keenam fungsi trigonometri saling berhubungan! Kita akan membuktikan sejumlah identitas<label for="sn-4" class="sidenote-toggle sidenote-number"></label>
             <input type="checkbox" id="sn-4" class="sidenote-toggle" />
             <span class="sidenote left">Identitas adalah suatu persamaan yang selalu benar untuk semua nilai variabel. Misalnya, persamaan \(x=x\) adalah suatu identitas karena tidak peduli berapa nilai variabel \(x\), persamaan tersebut bernilai benar. </span> 
@@ -260,7 +265,7 @@
             </div>
             <br>
 
-        <h1> Sudut-sudut Istimewa </h1>
+        <h1 id="istimewa"> Sudut-sudut Istimewa </h1>
         <p> Ada beberapa sudut yang disebut "istimewa" karena nilai-nilai fungsi trigonometri untuk sudut tersebut diketahui secara pasti dan tidak perlu dihitung menggunakan kalkulator atau deret ekspansi Taylor.
             <label for="sn-5" class="sidenote-toggle sidenote-number"></label>
             <input type="checkbox" id="sn-5" class="sidenote-toggle" />
@@ -1131,7 +1136,7 @@
             </div>
         </div>
 
-        <h1> Perluasan ke Sudut Tumpul dan Sudut Refleksi </h1>
+        <h1 id="perluasan"> Perluasan ke Sudut Tumpul dan Sudut Refleksi </h1>
             <p>
                 Sejauh ini kita telah mempelajari dasar-dasar trigonometri untuk sudut lancip (\(0^\circ\) hingga \(90^\circ\)). Namun, ini baru permulaan. Masih ada ukuran sudut lain yang perlu dipertimbangkan seperti sudut tumpul \(90^\circ < \theta < 180^\circ\), sudut lurus \(\theta = 180^\circ\), sudut refleksi \(180^\circ < \theta < 360^\circ\) hingga sudut penuh \(\theta = 360^\circ\).
             </p>
@@ -1364,7 +1369,7 @@
                 Nampak sekilas, rasanya tidak ada perbedaan dengan definisi sebelumnya. Akan tetapi, perhatikan baik-baik bahwa nilai \( r \) memang selalu positif (karena merupakan panjang garis), tetapi nilai \( x \) dan \( y \) bisa negatif (karena berada dalam koordinat Kartesius, bukan segitiga siku-siku). Akibatnya, sekarang nilai keenam fungsi trigonometri bisa negatif. Lebih lanjut lagi, dengan definisi yang baru, kita kini bisa menggunakan sudut-sudut yang lebih besar dari \( 90^\circ \).
             </p>
 
-        <h1> Tanda Fungsi Trigonometri di Tiap Kuadran </h1>
+        <h1 id="tanda"> Tanda Fungsi Trigonometri di Tiap Kuadran </h1>
         <p>
             Mari kita tinjau kembali garis \(r\) pada bagian sebelumnya. Perhatikan bahwa garis \( r \) bisa terletak di kuadran I, II, III, atau IV tergantung dengan besar sudut \( \theta \):
         </p>
@@ -2395,7 +2400,7 @@
          
         </figure>
 
-        <h1> Sudut-sudut Berelasi</h1>
+        <h1 id="relasi"> Sudut-sudut Berelasi</h1>
             <p>
                 Perlu digarisbawahi bahwa tidak perlu menghafal <b>semua</b> identitas sudut berelasi ini. Memori manusia punya batasannya, sehingga lebih baik menghafal hal-hal yang lebih esensial. Yang paling penting adalah memahami darimana identitas-identitas tersebut berasal. Bukankah lebih mudah menghafal cara berpikir yang diperlukan untuk menurunkan identitas-identitas tadi ketimbang menghafal identitasnya satu per satu? Kalau Anda hapal alurnya, Anda bisa dengan mudah menemukan kembali identitas-identitas tadi sendiri. Ini akan memberikan ruang lebih dalam memori kita yang bisa digunakan untuk menghafal hal-hal yang jauh lebih penting.
             </p>
@@ -3600,7 +3605,39 @@
             <p>Fungsi trigonometri lain (sekan, kosekan, dan kotangen) mengikuti pola yang sama sesuai periodenya.</p>
         </div>
         
-
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const tocList = document.getElementById("toc-list");
+            const headers = document.querySelectorAll("h1, h2");
+            
+            let currentH1Li = null; // Track current H1 list item
+            let currentH2Ol = null; // Track nested H2 list
+          
+            headers.forEach((header) => {
+              if (!header.id) {
+                header.id = header.textContent.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
+              }
+          
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = `#${header.id}`;
+              a.textContent = header.textContent;
+              li.appendChild(a);
+          
+              if (header.tagName === 'H1') {
+                // Create new H1 item
+                tocList.appendChild(li);
+                currentH1Li = li;
+                currentH2Ol = document.createElement("ol"); // Create nested list for H2s
+                currentH1Li.appendChild(currentH2Ol);
+              } else if (header.tagName === 'H2' && currentH2Ol) {
+                // Add H2 to current H1's nested list
+                currentH2Ol.appendChild(li);
+              }
+            });
+          });
+          </script>
+        
         <script>
             document.querySelectorAll('.bukti-toggle').forEach(button => {
                 button.addEventListener('click', () => {

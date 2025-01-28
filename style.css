@@ -414,15 +414,24 @@ h1:first-child {
 /* Nested ordered list for ToC */
 nav ol {
   counter-reset: item;
-  padding-left: 2rem;
+  list-style: none;
+  padding-left: 0;
 }
+
 nav ol > li {
   display: block;
+  padding-left: 2rem; /* Base indentation */
 }
+
 nav ol > li::before {
-  content: counters(item, '.') ' ';
+  content: counters(item, '.') '. ';
   counter-increment: item;
   padding-right: 0.85rem;
+}
+
+/* Nested lists for H2s */
+nav ol ol > li {
+  padding-left: 3rem; /* More indentation for H2s */
 }
 
 /* Center definitions (most useful for display equations) */
