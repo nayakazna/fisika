@@ -132,10 +132,10 @@ body {
   font-family: 'Garamond', Georgia, Cambria, 'Times New Roman', Times, serif;
   line-height: 1.8;
 
-  max-width: 100ch;
   min-height: 100vh;
   overflow-x: hidden;
   margin: 0 auto;
+  margin-top: 4em;
   padding: 1rem 1.25rem;
 
   counter-reset: figcaption theorem definition sidenote-counter;
@@ -149,6 +149,12 @@ body {
   hyphens: auto;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
+}
+
+body > * {
+  max-width: 100ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Justify all paragraphs */
@@ -218,6 +224,162 @@ textarea {
 article > * + * {
   margin-top: 1em;
 }
+
+/* Navbar */
+.fixed-nav-bar { 
+  display: flex;
+  position: fixed; 
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  width: 100vw;
+  height: 60px; 
+  background-color: #434343; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .fixed-nav-bar {
+    padding: 0 0.5rem;
+    height: 50px;
+  }
+  
+  body {
+    margin-top: 2.5em; 
+  }
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.nav-button:hover {
+  border-radius: 1cm;
+  opacity: 0.4;
+}
+
+.nav-spacer {
+  width: 86px;
+}
+
+/* Burger Button Styles */
+.burger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.burger-button:hover {
+  border-radius: 1cm;
+  opacity: 0.4;
+}
+
+.burger-button svg rect {
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+/* TOC Sidebar */
+.toc-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background: var(--body-bg-color);
+  box-shadow: -2px 0 12px rgba(0,0,0,0.2);
+  padding: 1rem;
+  transition: right 0.3s ease;
+  z-index: 10000;
+}
+
+.toc-sidebar[aria-hidden="false"] {
+  right: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--body-color);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+/* Enable counters for TOC numbering */
+#toc-list {
+  counter-reset: section;
+  padding-left: 0; /* Remove default list padding */
+}
+
+#toc-list > li {
+  list-style: none;
+}
+
+#toc-list > li > a {
+  display: inline; /* Keep the link inline */
+  text-decoration: none; /* Optional: to remove underlining */
+}
+
+#toc-list > li:before {
+  counter-increment: section;
+  content: counter(section) ". ";
+  margin-right: 5px; /* Optional: Adjust spacing between the number and text */
+}
+
+#toc-list ol {
+  counter-reset: subsection;
+  padding-left: 20px; /* Indentation for subsections */
+}
+
+#toc-list ol > li {
+  list-style: none;
+}
+
+#toc-list ol > li > a {
+  display: inline; /* Keep the link inline */
+}
+
+#toc-list ol > li:before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+  margin-right: 5px; /* Optional: Adjust spacing between the number and text */
+}
+
 
 /* Styles for inline code or code snippets */
 code,
@@ -434,6 +596,8 @@ nav ol ol > li {
   padding-left: 3rem; /* More indentation for H2s */
 }
 
+
+
 /* Center definitions (most useful for display equations) */
 dl dd {
   text-align: center;
@@ -480,39 +644,41 @@ dl dd {
 }
 
 /* bukti */
-.bukti {
-  display: block;
-  margin: 12px 0;
-  font-style: normal;
-  position: relative;
+details.bukti {
+  margin: 1em 0;
 }
-.bukti::before {
-  content: 'Bukti. ' attr(title);
+
+details.bukti > summary {
   font-style: italic;
-}
-
-.bukti::after {
-  content: '◾️';
-  filter: var(--bukti-symbol-filter);
-  position: absolute;
-  right: -12px;
-  bottom: -2px;
-}
-.bukti-toggle {
-  all: unset;
+  list-style: none;
   cursor: pointer;
-  font-size: 1em;
-  margin-right: 8px;
-}
-.bukti-content {
-  margin-top: 8px;
-}
-.bukti-toggle[aria-expanded="true"]::before {
-  content: '▼';
+  padding: 0.5em;
+  background: #2d2d2d;
+  border-radius: 4px;
 }
 
-.bukti-toggle[aria-expanded="false"]::before {
-  content: '▶';
+details.bukti > summary:empty:before {
+  content: 'Bukti';
+}
+
+details.bukti > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.bukti > summary::after {
+  content: "▼";
+  float: right;
+  transition: transform 0.2s;
+}
+
+details.bukti[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.bukti-content {
+  padding: 1em;
+  margin-top: 0.5em;
+  background-color: #2d2d2d;
 }
 
 
@@ -726,7 +892,7 @@ h6 {
 }
 
 button {
-  background-color: var(--body-bg-color);
+  background-color: #414141;
   color: var(--body-color);
   padding: 1px 1px;
   border: none;
@@ -735,7 +901,7 @@ button {
   font-size: 20px;
 }
 button:hover {
-  background-color: #414141;
+  background-color: #717171;
 }
 
 .MathJax { 
