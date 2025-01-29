@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id" class="latex-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deskripsi artikel">
+    <meta name="keywords" content="kata kunci artikel">
+    <meta name="author" content="Z. Nayaka Athadiansyah">
+    
+    <title>Trigonometri - Pembahasan Lengkap</title>
+    
+    <!-- External Resources -->
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+
+<body>
+    <!-- Navigation Control -->
+    <nav class="page-nav" aria-label="Navigasi halaman">
+        <button type="button" onclick="window.location.href = '../index.html'" aria-label="Kembali ke beranda">
+            <b>←</b>
+        </button>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="content-wrapper">
+        <!-- Article Header -->
+        <header class="article-header" style="font-size: x-large;">
+            <h1>Title</h1>
+            <p class="meta-info">
+                <a href="../assets/pembinaan/2023/trig.pdf" style="font-size: medium;">Versi PDF artikel ini</a>
+            </p>
+        </header>
+
+        <hr aria-hidden="true">
+
+        <!-- Dynamic Table of Contents -->
+        <nav role="navigation" aria-label="Daftar isi artikel" class="toc">
+            <h2>Daftar Isi</h2>
+            <ol id="toc-list"></ol>
+        </nav>
+
+        <!-- Article Content -->
+        <article class="main-content">
+            <!-- Content sections go here -->
+
+            <!-- Section 1 -->
+            <section id="intro" aria-labelledby="intro-heading">
+                <h1 id="intro-heading">Section 1</h1>
+
+                    <!-- Subsection A -->
+                    <section id="subsection-a" aria-labelledby="subsection-a-heading">
+                        <h2 id="subsection-a-heading">Subsection A</h2>
+                        <p>Content</p>
+                    </section>
+
+                    <!-- Subsection B -->
+                    <section id="subsection-b" aria-labelledby="subsection-b-heading">
+                        <h2 id="subsection-b-heading">Subsection B</h2>
+                        <p>Content</p>
+                    </section>
+                    
+            </section>
+            
+            <!-- Section 2 -->
+            <section id="section-2" aria-labelledby="section-2-heading">
+                <h1 id="section-2-heading">Section 2</h1>
+                <p>Content</p>
+            </section>
+            
+        </article>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+    // Dynamic TOC Generation
+    document.addEventListener("DOMContentLoaded", () => {
+        const tocList = document.getElementById("toc-list");
+        const headers = document.querySelectorAll("article h1, article h2");
+        
+        headers.forEach(header => {
+            if (!header.id) {
+                header.id = header.textContent
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .replace(/[^\w-]/g, '');
+            }
+
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = `#${header.id}`;
+            link.textContent = header.textContent;
+            
+            if (header.tagName === 'H1') {
+                const nestedList = document.createElement('ol');
+                listItem.append(link, nestedList);
+                tocList.appendChild(listItem);
+            } else if (header.tagName === 'H2') {
+                const lastH1 = tocList.querySelector('li:last-child ol');
+                if (lastH1) lastH1.appendChild(listItem);
+                listItem.appendChild(link);
+            }
+        });
+    });
+
+    // Proof Toggle System
+    document.addEventListener('click', (event) => {
+        if (event.target.matches('.bukti-toggle')) {
+            const button = event.target;
+            const content = button.nextElementSibling;
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            button.setAttribute('aria-expanded', !isExpanded);
+            content.hidden = isExpanded;
+        }
+    });
+    </script>
+</body>
+</html>
